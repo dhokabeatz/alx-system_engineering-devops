@@ -1,0 +1,6 @@
+# SSH client configuration to dissallow connecting with password
+
+Host your_server_ip
+  IdentityFile ~/.ssh/school
+  PasswordAuthentication no
+
