@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# This script installs and configures Nginx on a web server
+
+# Update package list and install Nginx
+sudo apt-get update
+sudo apt-get install -y nginx
+
+# Configuring Nginx to listen on port 80
+sudo sed -i 's/listen 80 default_server;/listen 80;/g' /etc/nginx/sites-available/default
+
+# RestartinG Nginx
+sudo service nginx restart
+
+# Test the installation with a curl request
+if curl -s http://localhost | grep -q "Hello World!"; then
+    echo "Nginx installed and configured successfully!"
+else
+    echo "Error: Nginx configuration or installation failed."
+fi
+
