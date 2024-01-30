@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 # This script configures Nginx to run as nginx user and listen on port 8080
 
-# Backup original Nginx configuration file with sudo
-sudo cp /etc/nginx/nginx.conf /etc/nginx/nginx.conf.bak
+# Backup original Nginx configuration file
+cp /etc/nginx/nginx.conf /etc/nginx/nginx.conf.bak
 
-# Update Nginx configuration to run as nginx user and listen on port 8080 with sudo
-sudo sed -i 's/user nginx;/user nginx;\n    listen 8080;/g' /etc/nginx/nginx.conf
+# Update Nginx configuration
+sed -i 's/user nginx;/user nginx;\n    listen 8080;/g' /etc/nginx/nginx.conf
 
-# Restart Nginx with sudo
-sudo service nginx restart
+# Restart Nginx
+service nginx restart
 
