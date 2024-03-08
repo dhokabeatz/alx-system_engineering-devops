@@ -1,4 +1,4 @@
-!/usr/bin/env bash
+#!/usr/bin/env bash
 # 0-transfer_file - Transfer a file to a server using scp
 
 # Displaying usage if less than 4 parameters are passed
