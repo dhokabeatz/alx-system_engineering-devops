@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Script that configures a new Ubuntu machine to respect above requirements
+
+sudo apt-get update
+sudo apt-get install -y nginx
+
+echo "Hello World!" | sudo tee /var/www/html/index.html
+new_string="server_name _;\n\trewrite ^\/redirect_me https:\/\/www.twitter.com\/dhokabeatz_ permanent;"
+sudo sed -i "s/server_name _;/$new_string/" /etc/nginx/sites-enabled/default
+
+sudo service nginx restart
