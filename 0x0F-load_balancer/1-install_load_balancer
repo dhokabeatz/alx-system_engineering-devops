@@ -17,8 +17,8 @@ frontend  dhokabeatz_frontend
         default_backend dhokabeatz_backend
 backend dhokabeatz_backend
         balance roundrobin
-        server 224672-web-01 54.160.117.237:80 check
-        server 224672-web-02 54.89.18.159:80 check
+        server 224672-web-01 54.157.132.60:80 check
+        server 224672-web-02 3.85.1.76:80 check
 "
 echo "$server_config" | sudo tee -a /etc/haproxy/haproxy.cfg
 
