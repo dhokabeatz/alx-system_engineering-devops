@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
 #Start apache2 in docker
-sudo start apache2 start
+#!/usr/bin/env bash
+/etc/init.d/apache2 start
+
